@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OneClickWeb - Site Vitrine Premium
 
-## Getting Started
+Site web moderne et élégant pour OneClickWeb, agence de développement web premium. Design inspiré d'Apple avec animations fluides et performance optimale.
 
-First, run the development server:
+## Technologies
+
+- **Next.js 16** - Framework React avec SSR/SSG
+- **TypeScript** - Typage statique pour plus de fiabilité
+- **Tailwind CSS v4** - Framework CSS utility-first moderne
+- **Framer Motion** - Animations fluides et performantes
+- **Inter Font** - Typographie premium via Google Fonts
+
+## Prérequis
+
+- **Node.js >= 20.9.0** (requis par Next.js 16)
+- npm ou yarn
+
+## Installation
 
 ```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure du Projet
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+oneclickweb-site/
+├── app/                      # Pages et routes (App Router)
+│   ├── page.tsx             # Page d'accueil
+│   ├── services/            # Page services
+│   ├── realisations/        # Page portfolio
+│   ├── contact/             # Page contact
+│   ├── layout.tsx           # Layout principal
+│   ├── globals.css          # Styles globaux + design system
+│   └── sitemap.ts           # Génération du sitemap
+├── components/              # Composants React
+│   ├── Header.tsx           # Navigation principale
+│   ├── Footer.tsx           # Pied de page
+│   ├── sections/            # Sections de pages
+│   └── ui/                  # Composants UI réutilisables
+├── public/                  # Fichiers statiques
+└── next.config.ts           # Configuration Next.js
+```
 
-## Learn More
+## Design System
 
-To learn more about Next.js, take a look at the following resources:
+### Couleurs
+- **Primary**: #0071e3 (Bleu premium)
+- **Black**: #000000
+- **White**: #ffffff
+- **Grays**: Palette de gris Apple (#f5f5f7 → #1d1d1f)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Typographie
+- **Font**: Inter (Google Fonts)
+- **Weights**: 400, 500, 600, 700
+- **Line Height**: 1.1 pour les titres, 1.6 pour le texte
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Espacements
+Système basé sur 8px : 8, 16, 24, 32, 48, 64, 96, 128px
 
-## Deploy on Vercel
+### Animations
+- Transitions douces avec cubic-bezier(0.4, 0, 0.2, 1)
+- Durées : 150ms (fast), 250ms (base), 350ms (slow)
+- Scroll animations avec Framer Motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Accueil (/)
+- Hero fullscreen avec animations
+- Présentation des services (4 cartes)
+- Section "Pourquoi nous choisir"
+- CTA final
+
+### Services (/services)
+- Hero section
+- 4 services détaillés (Vitrines, E-commerce, Applications, Hébergement)
+- Fonctionnalités et tarifs
+
+### Réalisations (/realisations)
+- Galerie de projets (6 projets fictifs)
+- Filtres par catégorie
+- Stats de l'agence
+
+### Contact (/contact)
+- Formulaire de contact avec validation
+- Informations de contact
+- Horaires d'ouverture
+
+## Optimisations
+
+### Performance
+- Images optimisées (AVIF/WebP)
+- Code splitting automatique
+- React Strict Mode activé
+- Compression gzip/brotli
+
+### SEO
+- Métadonnées optimisées pour chaque page
+- Sitemap.xml généré automatiquement
+- Robots.txt configuré
+- Schema markup (OpenGraph)
+- URLs sémantiques
+
+### Sécurité
+- Headers de sécurité (CSP, X-Frame-Options)
+- Protection CSRF
+- Validation des formulaires côté client et serveur
+
+## Scripts Disponibles
+
+```bash
+# Développement
+npm run dev
+
+# Build de production
+npm run build
+
+# Lancer en production
+npm start
+
+# Linter
+npm run lint
+```
+
+## Déploiement
+
+### Vercel (Recommandé)
+1. Push le code sur GitHub
+2. Connecter le repo à Vercel
+3. Déploiement automatique
+
+### Autres plateformes
+- **Netlify**: Compatible avec Next.js
+- **Railway**: Support Next.js natif
+- **VPS**: Build puis `npm start`
+
+## Configuration Environnement
+
+Créer un fichier `.env.local` :
+
+```env
+# URL du site (production)
+NEXT_PUBLIC_SITE_URL=https://oneclickweb.fr
+
+# Analytics (optionnel)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+## Maintenance
+
+### Mises à jour
+```bash
+# Vérifier les mises à jour
+npm outdated
+
+# Mettre à jour les dépendances
+npm update
+```
+
+### Ajout de contenu
+- **Images**: Placer dans `/public/images/`
+- **Projets**: Modifier `app/realisations/page.tsx`
+- **Services**: Modifier `app/services/page.tsx`
+
+## Support
+
+Pour toute question ou problème :
+- Email: contact@oneclickweb.fr
+- Téléphone: +33 1 23 45 67 89
+
+## Licence
+
+© 2024 OneClickWeb. Tous droits réservés.
