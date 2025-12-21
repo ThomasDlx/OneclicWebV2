@@ -182,7 +182,7 @@ export default function ContactPage() {
 
             {/* Formulaire */}
             <div className="lg:col-span-2">
-              <Card hover={false}>
+              <Card hover={false} className="bg-white dark:bg-gradient-to-br dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-xl border-gray-200 dark:border-gray-700/50">
                 {submitStatus === 'success' ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -193,7 +193,7 @@ export default function ContactPage() {
                     <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
                       Message envoyé !
                     </h3>
-                    <p className="text-gray-400 dark:text-white">
+                    <p className="text-gray-400 dark:text-gray-300">
                       Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
                     </p>
                   </motion.div>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="name"
-                          className="block text-sm font-semibold text-black dark:text-white mb-2"
+                          className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2"
                         >
                           Nom complet *
                         </label>
@@ -214,7 +214,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900/50 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary dark:focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                           placeholder="Votre nom"
                         />
                       </div>
@@ -222,7 +222,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="email"
-                          className="block text-sm font-semibold text-black dark:text-white mb-2"
+                          className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2"
                         >
                           Email *
                         </label>
@@ -233,7 +233,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900/50 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary dark:focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                           placeholder="votre@email.com"
                         />
                       </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="phone"
-                          className="block text-sm font-semibold text-black dark:text-white mb-2"
+                          className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2"
                         >
                           Téléphone
                         </label>
@@ -253,7 +253,7 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900/50 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary dark:focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                           placeholder="+33 1 23 45 67 89"
                         />
                       </div>
@@ -261,54 +261,68 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="service"
-                          className="block text-sm font-semibold text-black dark:text-white mb-2"
+                          className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2"
                         >
                           Service souhaité *
                         </label>
-                        <select
-                          id="service"
-                          name="service"
-                          value={formData.service}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                        >
-                          <option value="">Sélectionner...</option>
-                          <option value="vitrine">Site Vitrine</option>
-                          <option value="ecommerce">E-commerce</option>
-                          <option value="application">Application Web</option>
-                          <option value="hebergement">Hébergement</option>
-                          <option value="autre">Autre</option>
-                        </select>
+                        <div className="relative">
+                          <select
+                            id="service"
+                            name="service"
+                            value={formData.service}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900/50 text-black dark:text-white focus:border-primary dark:focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none cursor-pointer"
+                          >
+                            <option value="" className="bg-white dark:bg-gray-900 text-gray-400">Sélectionner...</option>
+                            <option value="vitrine" className="bg-white dark:bg-gray-900">Site Vitrine</option>
+                            <option value="ecommerce" className="bg-white dark:bg-gray-900">E-commerce</option>
+                            <option value="application" className="bg-white dark:bg-gray-900">Application Web</option>
+                            <option value="hebergement" className="bg-white dark:bg-gray-900">Hébergement</option>
+                            <option value="autre" className="bg-white dark:bg-gray-900">Autre</option>
+                          </select>
+                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400 dark:text-gray-500">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     <div>
                       <label
                         htmlFor="budget"
-                        className="block text-sm font-semibold text-black dark:text-white mb-2"
+                        className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2"
                       >
                         Budget estimé
                       </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                      >
-                        <option value="">Sélectionner...</option>
-                        <option value="1000-3000">1 000€ - 3 000€</option>
-                        <option value="3000-5000">3 000€ - 5 000€</option>
-                        <option value="5000-10000">5 000€ - 10 000€</option>
-                        <option value="10000+">Plus de 10 000€</option>
-                      </select>
+                      <div className="relative">
+                        <select
+                          id="budget"
+                          name="budget"
+                          value={formData.budget}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900/50 text-black dark:text-white focus:border-primary dark:focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none cursor-pointer"
+                        >
+                          <option value="" className="bg-white dark:bg-gray-900 text-gray-400">Sélectionner...</option>
+                          <option value="500-3000" className="bg-white dark:bg-gray-900">500€ - 3 000€</option>
+                          <option value="3000-5000" className="bg-white dark:bg-gray-900">3 000€ - 5 000€</option>
+                          <option value="5000-10000" className="bg-white dark:bg-gray-900">5 000€ - 10 000€</option>
+                          <option value="10000+" className="bg-white dark:bg-gray-900">Plus de 10 000€</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400 dark:text-gray-500">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
 
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm font-semibold text-black dark:text-white mb-2"
+                        className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2"
                       >
                         Message *
                       </label>
@@ -319,7 +333,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900/50 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary dark:focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                         placeholder="Parlez-nous de votre projet..."
                       />
                     </div>
@@ -333,7 +347,7 @@ export default function ContactPage() {
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                     </Button>
 
-                    <p className="text-xs text-gray-400 dark:text-white text-center">
+                    <p className="text-xs text-gray-400 dark:text-gray-400 text-center">
                       En soumettant ce formulaire, vous acceptez notre politique de confidentialité.
                     </p>
                   </form>
