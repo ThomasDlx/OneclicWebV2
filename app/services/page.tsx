@@ -24,7 +24,7 @@ export default function ServicesPage() {
         'Formulaires de contact avancés',
         'Intégration réseaux sociaux',
       ],
-      price: 'À partir de 1 500€',
+      price: 'À partir de 799€',
     },
     {
       id: 'ecommerce',
@@ -75,7 +75,7 @@ export default function ServicesPage() {
         'Mises à jour de sécurité',
         'Optimisations performance',
       ],
-      price: 'À partir de 50€/mois',
+      price: 'À partir de 15€/mois',
     },
   ];
 
