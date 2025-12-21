@@ -67,12 +67,6 @@ export default function ContactPage() {
       value: '06 06 46 30 72',
       link: 'tel:+33606463072',
     },
-    {
-      icon: '📍',
-      title: 'Adresse',
-      value: '48 Allée du Chateau Blanc, 59130 Lambersart',
-      link: null,
-    },
   ];
 
   return (
