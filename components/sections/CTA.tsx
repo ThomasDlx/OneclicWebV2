@@ -15,10 +15,10 @@ export default function CTA() {
         className="
           relative rounded-3xl
           bg-white
-          dark:bg-gradient-to-br dark:from-[#000011] dark:via-[#001133] dark:to-[#000011]
+          dark:bg-[#0d2137]
           p-12 lg:p-20 overflow-hidden
           shadow-[0_20px_50px_rgba(0,0,0,0.15)]
-          dark:shadow-[0_0_60px_rgba(0,150,255,0.4)]
+          dark:shadow-2xl
         "
       >
         {/* Grille de fond */}
@@ -26,7 +26,7 @@ export default function CTA() {
           className="
             absolute inset-0
             bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)]
-            dark:bg-[linear-gradient(to_right,#00ccff20_1px,transparent_1px),linear-gradient(to_bottom,#00ccff20_1px,transparent_1px)]
+            dark:bg-[linear-gradient(to_right,#00ccff10_1px,transparent_1px),linear-gradient(to_bottom,#00ccff10_1px,transparent_1px)]
             bg-[size:4rem_4rem]
           "
         />
@@ -38,7 +38,7 @@ export default function CTA() {
             -translate-x-1/2 -translate-y-1/2
             w-[600px] h-[600px]
             bg-primary/10
-            dark:bg-primary/40
+            dark:bg-primary/15
             rounded-full blur-3xl
           "
         />
@@ -71,7 +71,7 @@ export default function CTA() {
             className="
               text-lg md:text-xl
               text-gray-600
-              dark:text-[#b0e0ff]
+              dark:text-[#90d5ff]
               mb-12 max-w-2xl mx-auto leading-relaxed
             "
           >
@@ -93,7 +93,7 @@ export default function CTA() {
               className="
                 !bg-gray-900 !text-white
                 hover:!bg-gray-800
-                dark:!bg-[#00ccff] dark:hover:!bg-[#00e0ff]
+                dark:!bg-[#0088cc] dark:hover:!bg-[#00aadd]
                 !font-semibold !shadow-md
               "
             >
@@ -105,12 +105,12 @@ export default function CTA() {
               size="lg"
               className="
                 !border-2 !border-gray-900
-                dark:!border-[#00ccff]
+                dark:!border-[#0088cc]
                 !bg-transparent
                 !text-gray-900
-                dark:!text-[#00ccff]
+                dark:!text-[#0088cc]
                 hover:!bg-gray-900 hover:!text-white
-                dark:hover:!bg-[#00ccff] dark:hover:!text-[#000011]
+                dark:hover:!bg-[#0088cc] dark:hover:!text-[#000011]
                 !font-semibold !shadow-none
               "
             >
@@ -127,12 +127,12 @@ export default function CTA() {
             className="
               mt-16 pt-8
               border-t border-gray-200
-              dark:border-[#00ccff]/30
+              dark:border-[#0088cc]/20
             "
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-gray-500 dark:text-[#00ccff]/60 text-sm mb-1">
+                <div className="text-gray-500 dark:text-[#0088cc]/50 text-sm mb-1">
                   Réponse sous
                 </div>
                 <div className="text-gray-900 dark:text-[#e0f2ff] text-xl font-semibold">
@@ -141,7 +141,7 @@ export default function CTA() {
               </div>
 
               <div className="text-center">
-                <div className="text-gray-500 dark:text-[#00ccff]/60 text-sm mb-1">
+                <div className="text-gray-500 dark:text-[#0088cc]/50 text-sm mb-1">
                   Garantie
                 </div>
                 <div className="text-gray-900 dark:text-[#e0f2ff] text-xl font-semibold">
@@ -150,7 +150,7 @@ export default function CTA() {
               </div>
 
               <div className="text-center">
-                <div className="text-gray-500 dark:text-[#00ccff]/60 text-sm mb-1">
+                <div className="text-gray-500 dark:text-[#0088cc]/50 text-sm mb-1">
                   Support
                 </div>
                 <div className="text-gray-900 dark:text-[#e0f2ff] text-xl font-semibold">
