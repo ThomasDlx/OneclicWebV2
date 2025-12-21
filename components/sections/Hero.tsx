@@ -73,7 +73,7 @@ export default function Hero() {
           >
             {[
               { value: '50+', label: 'Projets réalisés' },
-              { value: '98%', label: 'Clients satisfaits' },
+              { value: '100%', label: 'Clients satisfaits' },
               { value: '5 ans', label: "D'expertise" },
             ].map((stat, index) => (
               <div key={index} className="text-center">

@@ -136,7 +136,7 @@ export default function RealisationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
               { value: '50+', label: 'Projets réalisés' },
-              { value: '98%', label: 'Clients satisfaits' },
+              { value: '100%', label: 'Clients satisfaits' },
               { value: '5 ans', label: "D'expérience" },
               { value: '24/7', label: 'Support disponible' },
             ].map((stat, index) => (
