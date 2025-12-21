@@ -73,9 +73,9 @@ export default function RealisationsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-6 leading-tight"
             >
-              Des projets qui
+              Des solutions web
               <br />
               <span className="text-primary">font la différence</span>
             </motion.h1>
