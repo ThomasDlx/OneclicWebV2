@@ -174,15 +174,15 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <Card hover={false} className="bg-gray-50 dark:bg-gray-800/50">
-                    <h3 className="text-xl font-bold text-black dark:text-white mb-6">
+                  <Card hover={false} className="bg-gray-50 dark:bg-gray-800/50 !p-5 md:!p-8">
+                    <h3 className="text-lg md:text-xl font-bold text-black dark:text-white mb-4 md:mb-6">
                       Fonctionnalités incluses
                     </h3>
-                    <ul className="space-y-4">
+                    <ul className="space-y-3 md:space-y-4">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-start">
                           <svg
-                            className="w-6 h-6 text-primary mr-4 flex-shrink-0 mt-0.5"
+                            className="w-5 h-5 md:w-6 md:h-6 text-primary mr-3 md:mr-4 flex-shrink-0 mt-0.5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -194,7 +194,7 @@ export default function ServicesPage() {
                               d="M5 13l4 4L19 7"
                             />
                           </svg>
-                          <span className="text-gray-600 dark:text-white">{feature}</span>
+                          <span className="text-sm md:text-base text-gray-600 dark:text-white">{feature}</span>
                         </li>
                       ))}
                     </ul>
