@@ -79,13 +79,13 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-black dark:text-white mb-4">Contact</h3>
             <ul className="space-y-3">
               <li className="text-sm text-gray-400 dark:text-white">
-                <a href="mailto:contact@oneclickweb.fr" className="hover:text-black dark:hover:text-white transition-colors">
-                  contact@oneclickweb.fr
+                <a href="mailto:oneclick.web59@gmail.com" className="hover:text-black dark:hover:text-white transition-colors">
+                  oneclick.web59@gmail.com
                 </a>
               </li>
               <li className="text-sm text-gray-400 dark:text-white">
-                <a href="tel:+33123456789" className="hover:text-black dark:hover:text-white transition-colors">
-                  +33 1 23 45 67 89
+                <a href="tel:+33606463072" className="hover:text-black dark:hover:text-white transition-colors">
+                  06 06 46 30 72
                 </a>
               </li>
             </ul>

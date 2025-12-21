@@ -58,19 +58,19 @@ export default function ContactPage() {
     {
       icon: '📧',
       title: 'Email',
-      value: 'contact@oneclickweb.fr',
-      link: 'mailto:contact@oneclickweb.fr',
+      value: 'oneclick.web59@gmail.com',
+      link: 'mailto:oneclick.web59@gmail.com',
     },
     {
       icon: '📞',
       title: 'Téléphone',
-      value: '+33 1 23 45 67 89',
-      link: 'tel:+33123456789',
+      value: '06 06 46 30 72',
+      link: 'tel:+33606463072',
     },
     {
       icon: '📍',
       title: 'Adresse',
-      value: 'Paris, France',
+      value: '48 Allée du Chateau Blanc, 59130 Lambersart',
       link: null,
     },
   ];
