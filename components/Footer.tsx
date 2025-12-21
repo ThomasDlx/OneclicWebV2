@@ -23,8 +23,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-50 dark:bg-[#0d2137] border-t border-gray-200/50 dark:border-blue-900/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
+    <footer className="relative bg-gray-50 dark:bg-[#0d2137] border-t border-gray-200/50 dark:border-blue-900/30 overflow-hidden">
+      {/* Grille de fond */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         {/* Section principale */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Colonne 1 : Logo et description */}
