@@ -41,7 +41,7 @@ export default function ServicesPage() {
         'Espace client personnalisé',
         'Analytics et reporting avancés',
       ],
-      price: 'À partir de 3 500€',
+      price: 'À partir de 1 999€',
     },
     {
       id: 'applications',
