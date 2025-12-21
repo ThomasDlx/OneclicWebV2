@@ -110,7 +110,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-400 dark:text-gray-300 leading-relaxed"
+              className="text-lg md:text-xl text-gray-400 dark:text-white leading-relaxed"
             >
               Nous accompagnons votre projet du design à la mise en ligne,
               avec des technologies modernes et un service premium.
@@ -141,11 +141,11 @@ export default function ServicesPage() {
                   <p className="text-xl text-primary font-semibold mb-6">
                     {service.tagline}
                   </p>
-                  <p className="text-lg text-gray-400 dark:text-gray-300 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-400 dark:text-white mb-8 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="inline-block px-6 py-3 rounded-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 mb-8">
-                    <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">
+                    <span className="text-sm font-semibold text-gray-600 dark:text-white">
                       {service.price}
                     </span>
                   </div>
@@ -177,7 +177,7 @@ export default function ServicesPage() {
                               d="M5 13l4 4L19 7"
                             />
                           </svg>
-                          <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                          <span className="text-gray-600 dark:text-white">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -200,7 +200,7 @@ export default function ServicesPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">
               Un projet en tête ?
             </h2>
-            <p className="text-lg text-gray-400 dark:text-gray-300 mb-8">
+            <p className="text-lg text-gray-400 dark:text-white mb-8">
               Discutons de vos besoins et trouvons ensemble la solution idéale pour votre projet.
             </p>
             <Button href="/contact" size="lg">

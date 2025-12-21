@@ -23,9 +23,9 @@
   --background: var(--color-white);
   --foreground: var(--color-gray-600);
 
-  /* Typographie Apple-style */
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-display: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Typographie classique */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
 
   /* Espacements (système 8px) */
   --spacing-1: 0.5rem;   /* 8px */
@@ -64,10 +64,15 @@
   /* Typographie en dark mode */
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
+    font-weight: 700;
+  }
+
+  h1 {
+    font-weight: 800;
   }
 
   p {
-    color: var(--color-gray-200);
+    color: var(--color-white);
   }
 }
 
@@ -101,21 +106,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
 p {
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  line-height: 1.7;
   color: var(--color-gray-400);
 }
 

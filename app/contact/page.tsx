@@ -106,7 +106,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-400 dark:text-gray-300 leading-relaxed"
+              className="text-lg md:text-xl text-gray-400 dark:text-white leading-relaxed"
             >
               Nous sommes là pour vous accompagner. Parlez-nous de vos besoins
               et recevez un devis gratuit sous 24 heures.
@@ -137,7 +137,7 @@ export default function ContactPage() {
                         {info.icon}
                       </div>
                       <div>
-                        <div className="text-sm text-gray-400 dark:text-gray-500 mb-1">
+                        <div className="text-sm text-gray-400 dark:text-white mb-1">
                           {info.title}
                         </div>
                         {info.link ? (
@@ -164,11 +164,11 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-400 dark:text-gray-500">Lundi - Vendredi</span>
+                    <span className="text-gray-400 dark:text-white">Lundi - Vendredi</span>
                     <span className="text-black dark:text-white font-medium">9h - 18h</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400 dark:text-gray-500">Weekend</span>
+                    <span className="text-gray-400 dark:text-white">Weekend</span>
                     <span className="text-black dark:text-white font-medium">Fermé</span>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold text-black dark:text-white mb-4">
                   Délai de réponse
                 </h3>
-                <p className="text-sm text-gray-400 dark:text-gray-300">
+                <p className="text-sm text-gray-400 dark:text-white">
                   Nous nous engageons à vous répondre dans les{' '}
                   <span className="text-primary font-semibold">24 heures</span>{' '}
                   suivant votre demande.
@@ -199,7 +199,7 @@ export default function ContactPage() {
                     <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
                       Message envoyé !
                     </h3>
-                    <p className="text-gray-400 dark:text-gray-300">
+                    <p className="text-gray-400 dark:text-white">
                       Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
                     </p>
                   </motion.div>
@@ -339,7 +339,7 @@ export default function ContactPage() {
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                     </Button>
 
-                    <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
+                    <p className="text-xs text-gray-400 dark:text-white text-center">
                       En soumettant ce formulaire, vous acceptez notre politique de confidentialité.
                     </p>
                   </form>

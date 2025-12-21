@@ -48,7 +48,7 @@ export default function Header() {
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-200"
+                  className="text-sm font-medium text-gray-600 dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -104,7 +104,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg transition-colors"
+                      className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-white hover:text-black dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg transition-colors"
                     >
                       {item.name}
                     </Link>

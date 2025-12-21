@@ -32,7 +32,7 @@ export default function Footer() {
             <Link href="/" className="text-2xl font-bold text-black dark:text-white">
               OneClickWeb
             </Link>
-            <p className="mt-4 text-sm text-gray-400 dark:text-gray-400 leading-relaxed">
+            <p className="mt-4 text-sm text-gray-400 dark:text-white leading-relaxed">
               Agence de développement web premium. Création de sites vitrines, e-commerce et applications sur mesure.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+                    className="text-sm text-gray-400 dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+                    className="text-sm text-gray-400 dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -75,12 +75,12 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-black dark:text-white mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="text-sm text-gray-400 dark:text-gray-400">
+              <li className="text-sm text-gray-400 dark:text-white">
                 <a href="mailto:contact@oneclickweb.fr" className="hover:text-black dark:hover:text-white transition-colors">
                   contact@oneclickweb.fr
                 </a>
               </li>
-              <li className="text-sm text-gray-400 dark:text-gray-400">
+              <li className="text-sm text-gray-400 dark:text-white">
                 <a href="tel:+33123456789" className="hover:text-black dark:hover:text-white transition-colors">
                   +33 1 23 45 67 89
                 </a>
@@ -93,7 +93,7 @@ export default function Footer() {
         <div className="border-t border-gray-200/50 dark:border-blue-900/30 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
-            <p className="text-sm text-gray-400 dark:text-gray-400">
+            <p className="text-sm text-gray-400 dark:text-white">
               © {currentYear} OneClickWeb. Tous droits réservés.
             </p>
 
@@ -103,7 +103,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-xs text-gray-400 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+                  className="text-xs text-gray-400 dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200"
                 >
                   {link.name}
                 </Link>

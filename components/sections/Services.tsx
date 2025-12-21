@@ -62,7 +62,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg text-gray-400 dark:text-gray-300 max-w-2xl mx-auto"
+          className="text-lg text-gray-400 dark:text-white max-w-2xl mx-auto"
         >
           Du simple site vitrine à l&apos;application web complexe, nous créons des expériences digitales qui vous ressemblent.
         </motion.p>
@@ -73,10 +73,10 @@ export default function Services() {
           <Card key={index} delay={index * 0.1}>
             <div className="text-5xl mb-6">{service.icon}</div>
             <h3 className="text-2xl font-bold text-black dark:text-white mb-4">{service.title}</h3>
-            <p className="text-gray-400 dark:text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+            <p className="text-gray-400 dark:text-white mb-6 leading-relaxed">{service.description}</p>
             <ul className="space-y-3">
               {service.features.map((feature, i) => (
-                <li key={i} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                <li key={i} className="flex items-center text-sm text-gray-500 dark:text-white">
                   <svg
                     className="w-5 h-5 text-primary mr-3 flex-shrink-0"
                     fill="none"

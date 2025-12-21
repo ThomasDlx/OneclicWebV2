@@ -43,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="text-lg md:text-xl text-gray-400 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 dark:text-white mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Création de sites web sur mesure, e-commerce performants et applications innovantes.
             Design premium, développement moderne, résultats garantis.
@@ -80,7 +80,7 @@ export default function Hero() {
                 <div className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-400 dark:text-gray-300 font-medium">
+                <div className="text-sm text-gray-400 dark:text-white font-medium">
                   {stat.label}
                 </div>
               </div>

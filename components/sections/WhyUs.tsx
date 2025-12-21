@@ -53,7 +53,7 @@ export default function WhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-400 dark:text-gray-300 mb-12 leading-relaxed"
+            className="text-lg text-gray-400 dark:text-white mb-12 leading-relaxed"
           >
             Nous combinons expertise technique et sens du design pour créer des expériences web
             qui marquent les esprits et génèrent des résultats concrets.
@@ -74,7 +74,7 @@ export default function WhyUs() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-black dark:text-white mb-2">{reason.title}</h3>
-                  <p className="text-gray-400 dark:text-gray-300 leading-relaxed">{reason.description}</p>
+                  <p className="text-gray-400 dark:text-white leading-relaxed">{reason.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -110,7 +110,7 @@ export default function WhyUs() {
                 <div className="text-center px-8">
                   <div className="text-6xl mb-4">🚀</div>
                   <div className="text-2xl font-bold text-black dark:text-white mb-2">Sites Web Premium</div>
-                  <div className="text-gray-400 dark:text-gray-300">Design · Performance · Fiabilité</div>
+                  <div className="text-gray-400 dark:text-white">Design · Performance · Fiabilité</div>
                 </div>
               </motion.div>
             </div>

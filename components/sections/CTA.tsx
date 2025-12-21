@@ -38,7 +38,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-white mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Discutons de votre projet et transformons vos idées en réalité digitale.
             Devis gratuit et sans engagement.
