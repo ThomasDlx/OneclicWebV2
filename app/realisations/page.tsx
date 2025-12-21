@@ -73,7 +73,7 @@ export default function RealisationsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-6"
             >
               Des projets qui
               <br />
@@ -84,7 +84,7 @@ export default function RealisationsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-400 leading-relaxed"
+              className="text-lg md:text-xl text-gray-400 dark:text-gray-300 leading-relaxed"
             >
               Découvrez une sélection de nos projets récents et plongez dans nos réussites clients.
             </motion.p>
@@ -108,11 +108,11 @@ export default function RealisationsPage() {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-black mb-3">
+                <h3 className="text-2xl font-bold text-black dark:text-white mb-3">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 dark:text-gray-300 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -120,7 +120,7 @@ export default function RealisationsPage() {
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium"
+                      className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-xs font-medium"
                     >
                       {tag}
                     </span>
@@ -148,10 +148,10 @@ export default function RealisationsPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-5xl font-bold text-black mb-2">
+                <div className="text-5xl font-bold text-black dark:text-white mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-gray-400 dark:text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -166,10 +166,10 @@ export default function RealisationsPage() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">
               Votre projet sera le prochain
             </h2>
-            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-400 dark:text-gray-300 mb-8 leading-relaxed">
               Prêt à créer quelque chose d&apos;exceptionnel ensemble ? Contactez-nous pour discuter de votre projet.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

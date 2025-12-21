@@ -95,7 +95,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white mb-6"
             >
               Discutons de
               <br />
@@ -106,7 +106,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-400 leading-relaxed"
+              className="text-lg md:text-xl text-gray-400 dark:text-gray-300 leading-relaxed"
             >
               Nous sommes là pour vous accompagner. Parlez-nous de vos besoins
               et recevez un devis gratuit sous 24 heures.
@@ -120,7 +120,7 @@ export default function ContactPage() {
             {/* Informations de contact */}
             <div className="lg:col-span-1 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-black mb-6">
+                <h2 className="text-2xl font-bold text-black dark:text-white mb-6">
                   Nos coordonnées
                 </h2>
                 <div className="space-y-6">
@@ -133,22 +133,22 @@ export default function ContactPage() {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       className="flex items-start"
                     >
-                      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-2xl mr-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-2xl mr-4">
                         {info.icon}
                       </div>
                       <div>
-                        <div className="text-sm text-gray-400 mb-1">
+                        <div className="text-sm text-gray-400 dark:text-gray-500 mb-1">
                           {info.title}
                         </div>
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-black hover:text-primary transition-colors font-medium"
+                            className="text-black dark:text-white hover:text-primary transition-colors font-medium"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <div className="text-black font-medium">
+                          <div className="text-black dark:text-white font-medium">
                             {info.value}
                           </div>
                         )}
@@ -158,27 +158,27 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-bold text-black mb-4">
+              <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-bold text-black dark:text-white mb-4">
                   Horaires d&apos;ouverture
                 </h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Lundi - Vendredi</span>
-                    <span className="text-black font-medium">9h - 18h</span>
+                    <span className="text-gray-400 dark:text-gray-500">Lundi - Vendredi</span>
+                    <span className="text-black dark:text-white font-medium">9h - 18h</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Weekend</span>
-                    <span className="text-black font-medium">Fermé</span>
+                    <span className="text-gray-400 dark:text-gray-500">Weekend</span>
+                    <span className="text-black dark:text-white font-medium">Fermé</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-bold text-black mb-4">
+              <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-bold text-black dark:text-white mb-4">
                   Délai de réponse
                 </h3>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-400 dark:text-gray-300">
                   Nous nous engageons à vous répondre dans les{' '}
                   <span className="text-primary font-semibold">24 heures</span>{' '}
                   suivant votre demande.
@@ -196,10 +196,10 @@ export default function ContactPage() {
                     className="text-center py-12"
                   >
                     <div className="text-6xl mb-6">✅</div>
-                    <h3 className="text-2xl font-bold text-black mb-4">
+                    <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
                       Message envoyé !
                     </h3>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 dark:text-gray-300">
                       Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
                     </p>
                   </motion.div>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="name"
-                          className="block text-sm font-semibold text-black mb-2"
+                          className="block text-sm font-semibold text-black dark:text-white mb-2"
                         >
                           Nom complet *
                         </label>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                           placeholder="Votre nom"
                         />
                       </div>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="email"
-                          className="block text-sm font-semibold text-black mb-2"
+                          className="block text-sm font-semibold text-black dark:text-white mb-2"
                         >
                           Email *
                         </label>
@@ -239,7 +239,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                           placeholder="votre@email.com"
                         />
                       </div>
@@ -249,7 +249,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="phone"
-                          className="block text-sm font-semibold text-black mb-2"
+                          className="block text-sm font-semibold text-black dark:text-white mb-2"
                         >
                           Téléphone
                         </label>
@@ -259,7 +259,7 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                           placeholder="+33 1 23 45 67 89"
                         />
                       </div>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="service"
-                          className="block text-sm font-semibold text-black mb-2"
+                          className="block text-sm font-semibold text-black dark:text-white mb-2"
                         >
                           Service souhaité *
                         </label>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                           value={formData.service}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                         >
                           <option value="">Sélectionner...</option>
                           <option value="vitrine">Site Vitrine</option>
@@ -292,7 +292,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="budget"
-                        className="block text-sm font-semibold text-black mb-2"
+                        className="block text-sm font-semibold text-black dark:text-white mb-2"
                       >
                         Budget estimé
                       </label>
@@ -301,7 +301,7 @@ export default function ContactPage() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                       >
                         <option value="">Sélectionner...</option>
                         <option value="1000-3000">1 000€ - 3 000€</option>
@@ -314,7 +314,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm font-semibold text-black mb-2"
+                        className="block text-sm font-semibold text-black dark:text-white mb-2"
                       >
                         Message *
                       </label>
@@ -325,7 +325,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
                         placeholder="Parlez-nous de votre projet..."
                       />
                     </div>
@@ -339,7 +339,7 @@ export default function ContactPage() {
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                     </Button>
 
-                    <p className="text-xs text-gray-400 text-center">
+                    <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
                       En soumettant ce formulaire, vous acceptez notre politique de confidentialité.
                     </p>
                   </form>
