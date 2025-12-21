@@ -279,6 +279,7 @@ export default function ContactPage() {
                             <option value="ecommerce" className="bg-white dark:bg-gray-900">E-commerce</option>
                             <option value="application" className="bg-white dark:bg-gray-900">Application Web</option>
                             <option value="hebergement" className="bg-white dark:bg-gray-900">Hébergement</option>
+                            <option value="materiel" className="bg-white dark:bg-gray-900">Matériel</option>
                             <option value="autre" className="bg-white dark:bg-gray-900">Autre</option>
                           </select>
                           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400 dark:text-gray-500">

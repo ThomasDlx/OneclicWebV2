@@ -77,6 +77,23 @@ export default function ServicesPage() {
       ],
       price: 'À partir de 15€/mois',
     },
+    {
+      id: 'materiel',
+      icon: '💻',
+      title: 'Matériel sur Commande',
+      tagline: 'Équipements informatiques sur mesure',
+      description:
+        'Nous vous proposons une sélection de matériel informatique haute performance adapté à vos besoins. Configuration personnalisée, conseil d\'expert et livraison rapide pour optimiser votre infrastructure.',
+      features: [
+        'Conseil en configuration matérielle',
+        'Sélection de matériel professionnel',
+        'Configuration et installation',
+        'Livraison et mise en place',
+        'Garantie étendue disponible',
+        'Support technique inclus',
+      ],
+      price: 'Sur devis',
+    },
   ];
 
   return (
