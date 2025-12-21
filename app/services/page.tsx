@@ -144,12 +144,12 @@ export default function ServicesPage() {
                   <p className="text-lg text-gray-400 dark:text-white mb-8 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="inline-block px-6 py-3 rounded-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 mb-8">
+                  <div className="inline-block px-6 py-3 rounded-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                     <span className="text-sm font-semibold text-gray-600 dark:text-white">
                       {service.price}
                     </span>
                   </div>
-                  <div className="mt-8">
+                  <div className="mt-4">
                     <Button href="/contact" size="lg">
                       Demander un devis
                     </Button>
