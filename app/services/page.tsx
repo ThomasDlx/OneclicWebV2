@@ -61,6 +61,23 @@ export default function ServicesPage() {
       price: 'Sur devis',
     },
     {
+      id: 'pentesting',
+      icon: '🔒',
+      title: 'Pentesting & Sécurité',
+      tagline: 'Audit de sécurité complet de vos systèmes',
+      description:
+        'Nous identifions les vulnérabilités de vos applications et infrastructures avant qu\'elles ne soient exploitées. Audits de sécurité complets, tests d\'intrusion, rapports détaillés et recommandations pour sécuriser votre entreprise.',
+      features: [
+        'Tests d\'intrusion complets',
+        'Audit des vulnérabilités',
+        'Scan de sécurité automatisé',
+        'Rapport détaillé avec remédiation',
+        'Tests de configuration',
+        'Recommandations de sécurité',
+      ],
+      price: 'Sur devis',
+    },
+    {
       id: 'hebergement',
       icon: '🚀',
       title: 'Hébergement & Maintenance',
