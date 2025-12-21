@@ -21,7 +21,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="inline-flex items-center justify-center mb-8"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary/90 text-sm font-medium border border-primary/20 dark:border-primary/40">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-white text-sm font-medium border border-primary/20 dark:border-primary/40">
               Agence Web Premium
             </span>
           </motion.div>
