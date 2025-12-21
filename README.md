@@ -176,4 +176,4 @@ Pour toute question ou problème :
 
 ## Licence
 
-© 2024 OneClickWeb. Tous droits réservés.
+© 2025 OneClickWeb. Tous droits réservés.
