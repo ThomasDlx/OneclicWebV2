@@ -3,6 +3,17 @@ const nextConfig = {
   // Optimisations de performance
   reactStrictMode: true,
 
+  // Fix pour WSL2 - Active le polling pour détecter les changements de fichiers
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.watchOptions = {
+        poll: 1000, // Vérifie les changements toutes les secondes
+        aggregateTimeout: 300,
+      };
+    }
+    return config;
+  },
+
   // Optimisations d'images
   images: {
     formats: ['image/avif', 'image/webp'],

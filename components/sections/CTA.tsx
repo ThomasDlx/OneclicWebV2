@@ -51,10 +51,18 @@ export default function CTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button href="/contact" size="lg" className="bg-white text-black hover:bg-gray-100">
+            <Button
+              href="/contact"
+              size="lg"
+              className="!bg-white !text-black hover:!bg-gray-50 !font-semibold !shadow-md"
+            >
               Démarrer maintenant
             </Button>
-            <Button href="/realisations" variant="ghost" size="lg" className="text-white hover:bg-white/10">
+            <Button
+              href="/realisations"
+              size="lg"
+              className="!border-2 !border-white !bg-transparent !text-white hover:!bg-white hover:!text-black !font-semibold !shadow-none"
+            >
               Voir nos réalisations
             </Button>
           </motion.div>
