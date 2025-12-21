@@ -49,6 +49,28 @@
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Dark Mode - Basé sur les préférences système */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Couleurs de fond inversées pour le dark mode - Ton bleu foncé */
+    --background: #0a1929; /* Bleu nuit profond */
+    --foreground: #f5f5f7;
+
+    /* Les couleurs principales restent les mêmes pour la cohérence */
+    --color-primary: #0a84ff; /* Bleu légèrement plus clair pour le dark mode */
+    --color-primary-hover: #409cff;
+  }
+
+  /* Typographie en dark mode */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-white);
+  }
+
+  p {
+    color: var(--color-gray-200);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

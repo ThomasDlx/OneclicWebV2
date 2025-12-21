@@ -28,8 +28,8 @@ export default function Card({
       }}
       whileHover={hover ? { y: -8, transition: { duration: 0.2 } } : {}}
       className={`
-        bg-white rounded-2xl p-8 border border-gray-200/50
-        ${hover ? 'hover:shadow-xl hover:border-gray-300/50' : 'shadow-sm'}
+        bg-white dark:bg-[#0d2137] rounded-2xl p-8 border border-gray-200/50 dark:border-blue-900/30
+        ${hover ? 'hover:shadow-xl hover:border-gray-300/50 dark:hover:border-blue-800/50' : 'shadow-sm'}
         transition-all duration-300
         ${className}
       `}

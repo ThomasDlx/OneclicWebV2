@@ -12,7 +12,7 @@ export default function CTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative rounded-3xl bg-gradient-to-br from-black via-gray-900 to-black p-12 lg:p-20 overflow-hidden"
+        className="relative rounded-3xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-[#0a1929] dark:via-[#0d2137] dark:to-[#0a1929] p-12 lg:p-20 overflow-hidden"
       >
         {/* Grille de fond */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]" />

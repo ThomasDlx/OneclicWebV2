@@ -42,7 +42,7 @@ export default function WhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold text-black mb-6"
+            className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6"
           >
             L&apos;excellence au service
             <br />de votre projet
@@ -53,7 +53,7 @@ export default function WhyUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-400 mb-12 leading-relaxed"
+            className="text-lg text-gray-400 dark:text-gray-300 mb-12 leading-relaxed"
           >
             Nous combinons expertise technique et sens du design pour créer des expériences web
             qui marquent les esprits et génèrent des résultats concrets.
@@ -69,12 +69,12 @@ export default function WhyUs() {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="flex items-start"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-3xl shadow-sm mr-6">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-white dark:bg-[#0d2137] flex items-center justify-center text-3xl shadow-sm mr-6">
                   {reason.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-black mb-2">{reason.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{reason.description}</p>
+                  <h3 className="text-xl font-bold text-black dark:text-white mb-2">{reason.title}</h3>
+                  <p className="text-gray-400 dark:text-gray-300 leading-relaxed">{reason.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -105,12 +105,12 @@ export default function WhyUs() {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="w-full h-full rounded-2xl bg-white shadow-2xl flex items-center justify-center border border-gray-200/50"
+                className="w-full h-full rounded-2xl bg-white dark:bg-[#0d2137] shadow-2xl flex items-center justify-center border border-gray-200/50 dark:border-blue-900/30"
               >
                 <div className="text-center px-8">
                   <div className="text-6xl mb-4">🚀</div>
-                  <div className="text-2xl font-bold text-black mb-2">Sites Web Premium</div>
-                  <div className="text-gray-400">Design · Performance · Fiabilité</div>
+                  <div className="text-2xl font-bold text-black dark:text-white mb-2">Sites Web Premium</div>
+                  <div className="text-gray-400 dark:text-gray-300">Design · Performance · Fiabilité</div>
                 </div>
               </motion.div>
             </div>

@@ -28,7 +28,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-sm'
+          ? 'bg-white/80 dark:bg-[#0a1929]/90 backdrop-blur-xl border-b border-gray-200/50 dark:border-blue-900/50 shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -37,7 +37,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl lg:text-2xl font-bold text-black hover:opacity-70 transition-opacity"
+            className="text-xl lg:text-2xl font-bold text-black dark:text-white hover:opacity-70 transition-opacity"
           >
             OneClickWeb
           </Link>
@@ -48,7 +48,7 @@ export default function Header() {
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-gray-600 hover:text-black transition-colors duration-200"
+                  className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -71,17 +71,17 @@ export default function Header() {
             aria-label="Menu"
           >
             <span
-              className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+              className={`block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+              className={`block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 ${
                 isMobileMenuOpen ? 'opacity-0' : ''
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+              className={`block w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
               }`}
             />
@@ -104,7 +104,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-4 py-3 text-base font-medium text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                      className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg transition-colors"
                     >
                       {item.name}
                     </Link>
