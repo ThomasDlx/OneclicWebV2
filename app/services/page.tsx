@@ -24,7 +24,7 @@ export default function ServicesPage() {
         'Formulaires de contact avancés',
         'Intégration réseaux sociaux',
       ],
-      price: 'À partir de 799€',
+      price: 'À partir de 799€ HT',
     },
     {
       id: 'ecommerce',
@@ -41,7 +41,7 @@ export default function ServicesPage() {
         'Espace client personnalisé',
         'Analytics et reporting avancés',
       ],
-      price: 'À partir de 1 999€',
+      price: 'À partir de 1 999€ HT',
     },
     {
       id: 'applications',
@@ -58,7 +58,7 @@ export default function ServicesPage() {
         'Tableaux de bord et analytics',
         'Intégrations tierces (CRM, ERP)',
       ],
-      price: 'Sur devis',
+      price: 'Sur devis (HT)',
     },
     {
       id: 'pentesting',
@@ -75,7 +75,7 @@ export default function ServicesPage() {
         'Tests de configuration',
         'Recommandations de sécurité',
       ],
-      price: 'Sur devis',
+      price: 'Sur devis (HT)',
     },
     {
       id: 'hebergement',
@@ -92,7 +92,8 @@ export default function ServicesPage() {
         'Mises à jour de sécurité',
         'Optimisations performance',
       ],
-      price: 'À partir de 15€/mois',
+      price: 'À partir de 15€ HT/mois*',
+      priceNote: '*En paiement annuel, sinon 20€ HT/mois',
     },
     {
       id: 'materiel',
@@ -109,7 +110,7 @@ export default function ServicesPage() {
         'Garantie étendue disponible',
         'Support technique inclus',
       ],
-      price: 'Sur devis',
+      price: 'Sur devis (HT)',
     },
   ];
 
@@ -183,6 +184,11 @@ export default function ServicesPage() {
                       {service.price}
                     </span>
                   </div>
+                  {'priceNote' in service && service.priceNote && (
+                    <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+                      {service.priceNote}
+                    </p>
+                  )}
                   <div className="mt-4">
                     <Button href="/contact" size="lg">
                       Demander un devis
