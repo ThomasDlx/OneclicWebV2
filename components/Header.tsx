@@ -7,15 +7,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+
+      setIsScrolled(currentScrollY > 20);
+
+      // Sur mobile, cache la navbar au scroll vers le bas
+      if (window.innerWidth < 768) {
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsHidden(true);
+        } else {
+          setIsHidden(false);
+        }
+      } else {
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navItems = [
     { name: 'Accueil', href: '/' },
@@ -30,7 +47,7 @@ export default function Header() {
         isScrolled || isMobileMenuOpen
           ? 'bg-white/95 dark:bg-[#0a1929]/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-blue-900/50 shadow-sm'
           : 'bg-transparent'
-      }`}
+      } ${isHidden && !isMobileMenuOpen ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
