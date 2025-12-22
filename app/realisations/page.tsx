@@ -10,46 +10,37 @@ import { motion } from 'framer-motion';
 export default function RealisationsPage() {
   const projects = [
     {
-      title: 'Boutique Mode Luxe',
-      category: 'E-commerce',
-      description: 'Site e-commerce haut de gamme avec plus de 500 produits, paiement sécurisé et interface d\'administration complète.',
-      tags: ['Next.js', 'Stripe', 'Tailwind'],
+      title: 'A.M.I PRO',
+      category: 'Site Vitrine',
+      description: 'Site vitrine avec espace d\'administration pour la gestion des contenus et des services proposés, ainsi que la demande de devis en ligne.',
+      tags: ['Next.js', 'Tailwind', 'PHP', 'MySQL', 'Symfony'],
       color: 'from-purple-500/10 to-pink-500/10',
+      link: 'https://amipro.com',
     },
     {
-      title: 'Cabinet d\'Architecture',
+      title: 'Codev Conseil',
       category: 'Site Vitrine',
-      description: 'Site vitrine minimaliste mettant en valeur un portfolio de projets architecturaux avec galerie interactive.',
-      tags: ['React', 'Framer Motion', 'SEO'],
+      description: 'Site vitrine pour un agent commercial, mettant en valeur ses services.',
+      tags: ['React', 'Tailwind', 'SEO', 'Next.js', 'API',],
       color: 'from-blue-500/10 to-cyan-500/10',
+      link: 'https://codevconseil.com',
+
     },
     {
-      title: 'Restaurant Gastronomique',
+      title: 'Darcque Mickael',
       category: 'Site Vitrine',
-      description: 'Site avec menu interactif, réservation en ligne et intégration Instagram pour partager les créations culinaires.',
-      tags: ['Next.js', 'API', 'Design'],
+      description: 'Site vitrine pour un artisan professionnel, mettant en avant son portfolio et ses services.',
+      tags: ['React', 'Tailwind', 'SEO', 'Next.js', 'API',],
       color: 'from-orange-500/10 to-red-500/10',
+      link: 'https://darcquemickael.fr/',
     },
     {
-      title: 'Plateforme SaaS',
-      category: 'Application Web',
-      description: 'Application web complexe avec tableau de bord, gestion multi-utilisateurs et facturation automatique.',
-      tags: ['TypeScript', 'PostgreSQL', 'API REST'],
+      title: 'Installation d\'un CRM complet pour AMI PRO',
+      category: 'CRM sur mesure',
+      description: 'Mise en place d\'un système CRM personnalisé pour gérer les clients, les devis, et les projets de manière efficace.',
+      tags: ['ORC', 'PostgreSQL', 'Comptabilité', 'Automatisations'],
       color: 'from-green-500/10 to-emerald-500/10',
-    },
-    {
-      title: 'Studio Créatif',
-      category: 'Site Vitrine',
-      description: 'Portfolio créatif avec animations personnalisées et présentation de cas clients en format storytelling.',
-      tags: ['Animation', 'Design', 'UX'],
-      color: 'from-indigo-500/10 to-purple-500/10',
-    },
-    {
-      title: 'Marketplace Artisanale',
-      category: 'E-commerce',
-      description: 'Plateforme multi-vendeurs permettant aux artisans de vendre leurs créations avec système de commission.',
-      tags: ['Multi-vendor', 'Stripe', 'Dashboard'],
-      color: 'from-yellow-500/10 to-orange-500/10',
+
     },
   ];
 
@@ -96,12 +87,6 @@ export default function RealisationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={index} delay={index * 0.1}>
-                <div
-                  className={`aspect-video rounded-xl bg-gradient-to-br ${project.color} mb-6 flex items-center justify-center`}
-                >
-                  <div className="text-6xl opacity-50">🎨</div>
-                </div>
-
                 <div className="mb-3">
                   <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
                     {project.category}
@@ -112,11 +97,11 @@ export default function RealisationsPage() {
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 dark:text-white mb-6 leading-relaxed">
+                <p className="text-gray-400 dark:text-white mb-3 leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
@@ -126,6 +111,30 @@ export default function RealisationsPage() {
                     </span>
                   ))}
                 </div>
+
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white font-medium text-sm hover:bg-blue-700 hover:text-white hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg group"
+                  >
+                    <span>Visiter le site</span>
+                    <svg
+                      className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                )}
               </Card>
             ))}
           </div>
