@@ -20,29 +20,48 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage('');
 
-    // Simuler l'envoi du formulaire
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setSubmitStatus('success');
-
-    // Reset après 5 secondes
-    setTimeout(() => {
-      setSubmitStatus('idle');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 5000);
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus('success');
+        // Reset après 5 secondes
+        setTimeout(() => {
+          setSubmitStatus('idle');
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            service: '',
+            budget: '',
+            message: '',
+          });
+        }, 5000);
+      } else {
+        setSubmitStatus('error');
+        setErrorMessage(data.message || 'Une erreur est survenue');
+      }
+    } catch {
+      setSubmitStatus('error');
+      setErrorMessage('Erreur de connexion. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -196,6 +215,26 @@ export default function ContactPage() {
                     <p className="text-gray-400 dark:text-gray-300">
                       Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
                     </p>
+                  </motion.div>
+                ) : submitStatus === 'error' ? (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center py-12"
+                  >
+                    <div className="text-6xl mb-6">❌</div>
+                    <h3 className="text-2xl font-bold text-black dark:text-white mb-4">
+                      Erreur d&apos;envoi
+                    </h3>
+                    <p className="text-gray-400 dark:text-gray-300 mb-6">
+                      {errorMessage}
+                    </p>
+                    <Button
+                      onClick={() => setSubmitStatus('idle')}
+                      variant="secondary"
+                    >
+                      Réessayer
+                    </Button>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
