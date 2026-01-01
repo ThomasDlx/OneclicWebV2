@@ -19,7 +19,7 @@ export default function MentionsLegalesPage() {
         <h3 class="text-xl font-semibold text-black dark:text-white mt-6 mb-3">Éditeur du site</h3>
         <ul class="space-y-2 mb-4">
           <li><strong>Raison sociale :</strong> OneClickWeb</li>
-          <li><strong>Forme juridique :</strong> SARL (Société à Responsabilité Limitée)</li>
+          <li><strong>Forme juridique :</strong>SAS, société par actions simplifiée</li>
           <li><strong>Capital social :</strong> 1 000€</li>
           <li><strong>Siège social :</strong> 48 Allée du Chateau Blanc, 59130 Lambersart, France</li>
           <li><strong>SIRET :</strong> 943 925 677 00016</li>
