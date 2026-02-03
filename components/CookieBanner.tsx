@@ -62,18 +62,18 @@ export default function CookieBanner() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed bottom-0 left-0 right-0 z-[70] p-4 md:p-6"
+            className="fixed bottom-0 left-0 right-0 z-[70] p-4 md:p-6 max-h-[90vh] overflow-y-auto"
           >
             <div className="max-w-6xl mx-auto">
-              <div className="bg-white dark:bg-[#0a1929] rounded-2xl shadow-2xl border border-gray-200 dark:border-blue-900/50 p-6 md:p-8">
-                <div className="flex flex-col md:flex-row md:items-center gap-6">
+              <div className="bg-white dark:bg-[#0a1929] rounded-2xl shadow-2xl border border-gray-200 dark:border-blue-900/50 p-4 md:p-8">
+                <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
                   {/* Icône et texte */}
                   <div className="flex-1">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-2xl">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl md:text-2xl">
                         🍪
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <h3 className="text-lg font-bold text-black dark:text-white mb-2">
                           Respect de votre vie privée
                         </h3>
